@@ -1,0 +1,171 @@
+.tweet-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* divのように振る舞わせる */
+}
+
+/* frontend/src/components/TweetCard.css */
+
+.tweet-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  text-align: left;
+  transition: box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center; /* アイコンとテキストを中央揃え */
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.tweet-avatar {
+  width: 48px; /* アイコンのサイズ */
+  height: 48px; /* アイコンのサイズ */
+  border-radius: 50%; /* 円形にトリミング */
+  object-fit: cover; /* 画像がはみ出さないように調整 */
+  margin-right: 12px; /* ユーザー名との間にスペース */
+  flex-shrink: 0; /* 縮小させない */
+}
+
+.tweet-author {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* スペースを埋める */
+}
+
+.author-name {
+  font-weight: bold;
+  color: #1c1e21;
+}
+
+.author-screen-name {
+  color: #657786;
+  font-size: 0.9rem;
+}
+
+.tweet-view-on-x {
+    font-family: "TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #1DA1F2;
+    text-decoration: none;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+.tweet-view-on-x:hover {
+    background-color: #e8f5fe;
+}
+
+
+.tweet-text {
+  margin-bottom: 1rem;
+  white-space: pre-wrap; /* 改行やスペースを保持 */
+  word-wrap: break-word;
+  color: #14171a;
+}
+
+.tweet-text a {
+    color: #1DA1F2;
+    text-decoration: none;
+}
+.tweet-text a:hover {
+    text-decoration: underline;
+}
+
+.tweet-text-unavailable {
+  color: #657786;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* --- Image Grid --- */
+.image-grid {
+  display: grid;
+  gap: 4px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f2f5;
+}
+
+.tweet-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+.image-container:hover .tweet-image {
+    transform: scale(1.05);
+}
+
+
+/* Grid layouts for 1-4 images */
+.image-grid-1 {
+  grid-template-columns: 1fr;
+  max-height: 500px;
+}
+
+.image-grid-2 {
+  grid-template-columns: 1fr 1fr;
+  aspect-ratio: 16 / 9;
+}
+
+.image-grid-3 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  aspect-ratio: 1.25 / 1;
+}
+.image-grid-3 .image-container:first-child {
+  grid-row: span 2;
+}
+
+.image-grid-4 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  aspect-ratio: 1 / 1;
+}
+
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* フッターをカードの下部に固定 */
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #657786;
+  border-top: 1px solid #e6ecf0;
+}
+
+.tweet-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tweet-tag {
+  background-color: #e8f5fe;
+  color: #1DA1F2;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}

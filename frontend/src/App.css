@@ -1,0 +1,193 @@
+/* 全体のコンテナ */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* 投稿追加フォーム */
+.add-post-form {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.add-post-form h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* 投稿リスト */
+.post-list h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 投稿アイテム */
+.post-item {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.post-item-url {
+  word-wrap: break-word;
+}
+
+.post-item-url a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.post-item-url a:hover {
+  text-decoration: underline;
+}
+
+.post-item-tags {
+  margin-top: 1rem;
+}
+
+.post-item-tags ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.post-item-tags li {
+  background-color: #f0f0f0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.error-message {
+    color: #d9534f;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* PostListPage specific styles */
+.tag-filter-accordion {
+  margin-bottom: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tag-filter-button {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  background: #f8f9fa;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tag-selection-area {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-top: 1px solid #ccc;
+}
+
+.tag-button {
+  padding: 4px 12px;
+  border-radius: 16px;
+  border: 1px solid #007bff;
+  background: white;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.tag-button.selected {
+  background: #007bff;
+  color: white;
+}
+
+.selected-tags-container {
+  margin-bottom: 1rem;
+}
+
+.selected-tag {
+  margin: 0 5px;
+  padding: 2px 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+}
+
+.clear-tags-button {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 0;
+}
+
+.clear-tags-button:hover {
+  text-decoration: underline;
+}
+
+.post-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
